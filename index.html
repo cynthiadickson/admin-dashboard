@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="layout">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <h2>Admin</h2>
+        <a class="active" href="#">Dashboard</a>
+        <a href="#">Users</a>
+        <a href="#">Reports</a>
+        <a href="#">Settings</a>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main">
+        <header class="header">
+          <h1>Dashboard</h1>
+        </header>
+
+        <!-- KPI Cards -->
+        <section class="cards">
+          <div class="card">
+            <h3>Users</h3>
+            <p>1,240</p>
+          </div>
+          <div class="card">
+            <h3>Revenue</h3>
+            <p>$32,500</p>
+          </div>
+          <div class="card">
+            <h3>Orders</h3>
+            <p>320</p>
+          </div>
+        </section>
+
+        <!-- Chart -->
+        <section class="chart-section">
+          <h2>Monthly Revenue</h2>
+          <canvas id="revenueChart"></canvas>
+        </section>
+
+        <!-- Table -->
+        <section class="table-section">
+          <h2>Recent Orders</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Customer</th>
+                <th>Status</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#1023</td>
+                <td>Alice</td>
+                <td>Completed</td>
+                <td>$120</td>
+              </tr>
+              <tr>
+                <td>#1024</td>
+                <td>Bob</td>
+                <td>Pending</td>
+                <td>$75</td>
+              </tr>
+              <tr>
+                <td>#1025</td>
+                <td>Charlie</td>
+                <td>Cancelled</td>
+                <td>$45</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
